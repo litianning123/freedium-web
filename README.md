@@ -74,17 +74,31 @@ To configure your Freedium instance, follow these steps:
    127.0.0.1 freedium.local
    ```
 
-5. Start the Freedium services (`min` profile):
+5. Start the Freedium services (`local` profile):
 
+   You can start the services using the full docker compose command:
    ```
    sudo docker compose --profile local -f ./docker-compose/docker-compose.yml up
    ```
 
-   Stopping the services:
-
+   And stop them with:
    ```
    sudo docker compose --profile local -f ./docker-compose/docker-compose.yml down
    ```
+
+   Alternatively, you can use the provided `Makefile` for convenience:
+   - **Start services:**
+     ```bash
+     make start
+     ```
+   - **Stop services:**
+     ```bash
+     make stop
+     ```
+   - **Check status:**
+     ```bash
+     make status
+     ```
 
 And now you can access local instance of Freedium by opening browser and type `https://freedium.local` or `http://localhost:6752` if you ignored 4th step. There is would be a warning about insecure connection, because we use self-signed TLS certificate. Ignore it.
 
