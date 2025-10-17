@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: freedium-web
+    env: docker
+    healthCheckPath: /health
+    startCommand: "python3 -m server server"

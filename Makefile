@@ -12,7 +12,7 @@ stop:
 	docker compose --profile $(PROFILE) -f $(COMPOSE_FILE) down
 
 status:
-	@if [ -n "$(shell sudo docker compose --profile $(PROFILE) -f $(COMPOSE_FILE) ps -q 2>/dev/null)" ]; then \
+	@if [ -n "$(shell docker compose --profile $(PROFILE) -f $(COMPOSE_FILE) ps -q 2>/dev/null)" ]; then \
 		echo "up"; \
 	else \
 		echo "down"; \
