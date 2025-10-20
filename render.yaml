@@ -7,7 +7,7 @@ services:
    region: oregon
    plan: starter
    ipAllowList:
-     - cidr: 104.28.39.0/24
+     - source: 104.28.39.0/24
        description: "Allow 104.28.39.0 subnet"
    envVars:
      - key: HOST_ADDRESS
